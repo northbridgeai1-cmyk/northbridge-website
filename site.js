@@ -1,4 +1,4 @@
-/* NorthBridge shared page script
+/* OffDesk shared page script
    (The scheduler link lives in ONE place: the inline script in book.html) */
 (function(){
   var btn = document.getElementById('langBtn');
