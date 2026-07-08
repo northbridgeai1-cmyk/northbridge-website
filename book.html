@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book your first meeting: NorthBridge</title>
+<meta name="description" content="Pick a time for your free 30-minute first meeting with NorthBridge. Choose Zoom or Google Meet; the invite lands on both calendars automatically.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .plan-chip{
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;
+    background:rgba(31,182,140,.14);border:1px solid rgba(31,182,140,.5);border-radius:999px;
+    padding:7px 16px;font-size:.85rem;font-weight:700;color:var(--teal-soft);
+  }
+  .plan-chip .dot{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  .book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start;padding:80px 0}
+  @media(max-width:880px){.book-grid{grid-template-columns:1fr;padding:56px 0}}
+  .expect{counter-reset:e}
+  .expect-item{border-top:1px solid var(--line);padding:20px 0 20px 54px;position:relative;counter-increment:e}
+  .expect-item:last-child{border-bottom:1px solid var(--line)}
+  .expect-item::before{
+    content:counter(e);position:absolute;left:0;top:18px;width:36px;height:36px;border-radius:50%;
+    background:#fff;border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-weight:700;color:var(--navy);
+  }
+  .expect-item h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+  .expect-item p{font-size:.92rem;color:var(--ink-soft)}
+  .sched-card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px;
+    box-shadow:0 24px 48px -22px rgba(19,26,48,.3);
+  }
+  .sched-card h2{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--navy);margin-bottom:10px}
+  .sched-card p{font-size:.94rem;color:var(--ink-soft)}
+  #schedFrame{width:100%;height:640px;border:1px solid var(--line);border-radius:12px;margin-top:20px;display:none}
+  .assure{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+  .assure li{list-style:none;position:relative;padding-left:28px;font-size:.88rem;color:var(--ink-soft)}
+  .assure li::before{
+    content:"";position:absolute;left:2px;top:6px;width:13px;height:8px;
+    border-left:2.5px solid var(--teal);border-bottom:2.5px solid var(--teal);transform:rotate(-45deg);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="NorthBridge home">
+      <svg width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="nbg" x1="8" y1="52" x2="56" y2="12" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#c1572f"/><stop offset=".55" stop-color="#1f9e8c"/><stop offset="1" stop-color="#25d193"/>
+          </linearGradient>
+        </defs>
+        <path d="M32 10 C34.5 22 42 29.5 54 32 C42 34.5 34.5 42 32 54 C29.5 42 22 34.5 10 32 C22 29.5 29.5 22 32 10 Z" fill="url(#nbg)"/>
+        <circle cx="32" cy="8" r="6" fill="url(#nbg)"/><circle cx="32" cy="56" r="6" fill="url(#nbg)"/>
+        <circle cx="8" cy="32" r="6" fill="url(#nbg)"/><circle cx="56" cy="32" r="6" fill="url(#nbg)"/>
+        <path d="M32 20 L35 30 L32 44 L29 30 Z" fill="#2a2018" opacity=".85"/>
+      </svg>
+      <span class="brand-name">North<br>bridge<em>.ai</em></span>
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="index.html#brands"><span class="en">What we do</span><span class="es">Qué hacemos</span></a>
+        <a href="index.html#plans"><span class="en">Plans</span><span class="es">Planes</span></a>
+        <a href="index.html#process"><span class="en">Process</span><span class="es">Proceso</span></a>
+        <a href="index.html#faq"><span class="en">FAQ</span><span class="es">Preguntas</span></a>
+      </div>
+      <button class="lang-toggle" id="langBtn" aria-label="Cambiar idioma">ES</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" style="padding:64px 0 56px">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html#plans">← <span class="en">Back to plans</span><span class="es">Volver a planes</span></a></p>
+    <p class="plan-chip"><span class="dot"></span><span class="en">You picked:</span><span class="es">Elegiste:</span>&nbsp;<span id="planName">...</span></p>
+    <h1>
+      <span class="en">Good choice. Now pick a time.</span>
+      <span class="es">Buena elección. Ahora elige la hora.</span>
+    </h1>
+    <p class="lede">
+      <span class="en">The first meeting is free, 30 minutes, and commits you to nothing. You'll see exactly how we'd work, and we'll find the problems worth solving in your business, including what they're costing you.</span>
+      <span class="es">La primera reunión es gratuita, de 30 minutos, y no te compromete a nada. Verás exactamente cómo trabajaríamos, y encontraremos los problemas que vale la pena resolver en tu negocio, incluido lo que te están costando.</span>
+    </p>
+  </div>
+</section>
+
+<section style="background:var(--paper)">
+  <div class="wrap book-grid">
+    <div>
+      <p class="step-label"><span class="en">What to expect</span><span class="es">Qué esperar</span></p>
+      <div class="expect">
+        <div class="expect-item">
+          <h3><span class="en">Pick your time and your app</span><span class="es">Elige tu hora y tu aplicación</span></h3>
+          <p><span class="en">Choose a slot that suits you and whether we meet on Zoom or Google Meet. Enter your email, that's all we need.</span><span class="es">Elige el horario que te convenga y si nos vemos por Zoom o Google Meet. Escribe tu correo, es todo lo que necesitamos.</span></p>
+        </div>
+        <div class="expect-item">
+          <h3><span class="en">The invite arrives instantly</span><span class="es">La invitación llega al instante</span></h3>
+          <p><span class="en">You get an email with the meeting link, and the event lands on your calendar and ours automatically, with reminders before we start.</span><span class="es">Recibes un correo con el enlace de la reunión, y el evento aparece en tu calendario y en el nuestro automáticamente, con recordatorios antes de empezar.</span></p>
+        </div>
+        <div class="expect-item">
+          <h3><span class="en">We come prepared</span><span class="es">Llegamos preparados</span></h3>
+          <p><span class="en">We'll have looked at the plan you picked and arrive with questions about your business, not a canned pitch. Within days you get a written report and a fixed quote, yours to keep either way.</span><span class="es">Habremos revisado el plan que elegiste y llegamos con preguntas sobre tu negocio, no con un discurso enlatado. En pocos días recibes un informe escrito y una cotización fija, tuyos de cualquier forma.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="sched-card">
+      <h2><span class="en">Choose your slot</span><span class="es">Elige tu horario</span></h2>
+      <p id="schedReady" style="display:none">
+        <span class="en">Times shown are ones we're actually free: the calendar blocks overlaps and keeps a 15-minute gap between meetings, so we're never late to yours.</span>
+        <span class="es">Los horarios que ves son los que realmente tenemos libres: el calendario bloquea cruces y deja 15 minutos entre reuniones, así que nunca llegaremos tarde a la tuya.</span>
+      </p>
+      <p id="schedFallback">
+        <span class="en">Our online calendar is being connected. Meanwhile, booking takes one email: send us two or three times that suit you and whether you prefer Zoom or Google Meet, and we'll confirm one within a business day and send the invite.</span>
+        <span class="es">Estamos conectando nuestro calendario en línea. Mientras tanto, reservar toma un correo: envía nos dos o tres horarios que te sirvan y si prefieres Zoom o Google Meet, y confirmamos uno en un día hábil y te enviamos la invitación.</span>
+      </p>
+      <iframe id="schedFrame" title="Scheduler"></iframe>
+      <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn big" id="schedOpen" style="display:none" target="_blank" rel="noopener" href="#">
+          <span class="en">Open the scheduler</span><span class="es">Abrir el calendario</span>
+        </a>
+        <a class="btn navy big" id="mailBtn" href="mailto:northbridgeai1@gmail.com">
+          <span class="en">Book by email</span><span class="es">Reservar por correo</span>
+        </a>
+      </div>
+      <ul class="assure">
+        <li><span class="en">Free · 30 minutes · no commitment</span><span class="es">Gratis · 30 minutos · sin compromiso</span></li>
+        <li><span class="en">Zoom or Google Meet, your pick</span><span class="es">Zoom o Google Meet, tú eliges</span></li>
+        <li><span class="en">English or Spanish</span><span class="es">En inglés o español</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 NorthBridge · Quito, Ecuador</span>
+    <span><span class="en">Automation that pays for itself.</span><span class="es">Automatización que se paga sola.</span></span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+/* ▼▼ PASTE YOUR SCHEDULER LINK BETWEEN THE QUOTES (this is the ONLY place) ▼▼
+   Recommended: Cal.com event link (lets visitors choose Zoom OR Google Meet,
+   supports 15-min buffers and blocks overlapping bookings against your Google Calendar).
+   A Google Calendar appointment-schedule link also works (Google Meet only). */
+var NB_SCHEDULER_URL = "REPLACE_ME";
+
+(function(){
+  /* show which plan was picked, carry it into the email fallback */
+  var plan = null;
+  try{ plan = new URLSearchParams(location.search).get('plan'); }catch(e){}
+  var isEs = document.documentElement.getAttribute('data-lang') === 'es';
+  var planEl = document.getElementById('planName');
+  if(planEl) planEl.textContent = plan || (isEs ? 'tu plan' : 'your plan');
+
+  var mail = document.getElementById('mailBtn');
+  if(mail){
+    var subj = (plan ? plan + ': ' : '') + 'First meeting';
+    var body = 'Hi NorthBridge,\n\nI picked: ' + (plan || '(not sure yet)') +
+      '\nTimes that work for me (with timezone):\n1.\n2.\n3.\n\nI prefer: Zoom / Google Meet\n\nMy business: ';
+    mail.href = 'mailto:northbridgeai1@gmail.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+  }
+
+  /* activate the scheduler once the URL is set */
+  if(NB_SCHEDULER_URL && NB_SCHEDULER_URL.indexOf('REPLACE_ME') === -1){
+    var open = document.getElementById('schedOpen');
+    var frame = document.getElementById('schedFrame');
+    var ready = document.getElementById('schedReady');
+    var fallback = document.getElementById('schedFallback');
+    if(open){ open.href = NB_SCHEDULER_URL; open.style.display = 'inline-block'; }
+    if(ready) ready.style.display = 'block';
+    if(fallback) fallback.style.display = 'none';
+    /* embed inline when the provider allows iframes (Cal.com and Google's gv=true embed do) */
+    if(frame && (NB_SCHEDULER_URL.indexOf('cal.com') > -1 || NB_SCHEDULER_URL.indexOf('gv=true') > -1)){
+      frame.src = NB_SCHEDULER_URL;
+      frame.style.display = 'block';
+    }
+  }
+})();
+</script>
+</body>
+</html>
