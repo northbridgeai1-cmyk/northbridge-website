@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NorthBridge Cinderella: Data &amp; workflow automation</title>
+<meta name="description" content="Cinderella is NorthBridge's data and workflow practice: AI workflow building on n8n for small businesses, including payment chasing, invoice reminders, automatic reports, and data moved between your apps. Plans from $199/month, built and maintained for you.">
+<meta name="keywords" content="AI workflow builder, n8n workflow automation service, payment chasing automation, invoice reminder automation, accounts receivable automation, automatic report generation, data entry automation, client onboarding automation, small business workflow automation, automatización de flujos de trabajo, cobro de facturas automático">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "NorthBridge Cinderella",
+  "serviceType": "Data and workflow automation",
+  "provider": {"@type": "ProfessionalService", "name": "NorthBridge", "email": "northbridgeai1@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Quito", "addressCountry": "EC"}},
+  "description": "AI workflow building and maintenance on n8n for small and medium businesses: payment chasing, invoice reminders, automatic report generation, data moved between apps, client onboarding checklists. Workflows live in accounts the client owns. English and Spanish.",
+  "areaServed": ["Worldwide (virtual)", "Ecuador"],
+  "offers": [
+    {"@type": "Offer", "name": "Sweep", "description": "2 workflows built and maintained, monthly performance report, email support.", "price": "199", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "199", "priceCurrency": "USD", "unitText": "per month"}},
+    {"@type": "Offer", "name": "Shine", "description": "3 workflows built and maintained, monthly performance report, 1 workflow tweak or swap per month.", "price": "329", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "329", "priceCurrency": "USD", "unitText": "per month"}},
+    {"@type": "Offer", "name": "Spotless", "description": "5 workflows built and maintained, unlimited tweaks and swaps, priority build queue.", "price": "349", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "349", "priceCurrency": "USD", "unitText": "per month"}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="NorthBridge home">
+      <svg width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="nbg" x1="8" y1="52" x2="56" y2="12" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#c1572f"/><stop offset=".55" stop-color="#1f9e8c"/><stop offset="1" stop-color="#25d193"/>
+          </linearGradient>
+        </defs>
+        <path d="M32 10 C34.5 22 42 29.5 54 32 C42 34.5 34.5 42 32 54 C29.5 42 22 34.5 10 32 C22 29.5 29.5 22 32 10 Z" fill="url(#nbg)"/>
+        <circle cx="32" cy="8" r="6" fill="url(#nbg)"/><circle cx="32" cy="56" r="6" fill="url(#nbg)"/>
+        <circle cx="8" cy="32" r="6" fill="url(#nbg)"/><circle cx="56" cy="32" r="6" fill="url(#nbg)"/>
+        <path d="M32 20 L35 30 L32 44 L29 30 Z" fill="#2a2018" opacity=".85"/>
+      </svg>
+      <span class="brand-name">North<br>bridge<em>.ai</em></span>
+    </a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="index.html#brands"><span class="en">What we do</span><span class="es">Qué hacemos</span></a>
+        <a href="#plans"><span class="en">Plans</span><span class="es">Planes</span></a>
+        <a href="index.html#process"><span class="en">Process</span><span class="es">Proceso</span></a>
+        <a href="socrates.html"><span class="en">Training &amp; events</span><span class="es">Capacitación y eventos</span></a>
+        <a href="index.html#faq"><span class="en">FAQ</span><span class="es">Preguntas</span></a>
+      </div>
+      <button class="lang-toggle" id="langBtn" aria-label="Cambiar idioma">ES</button>
+      <a class="btn" href="mailto:northbridgeai1@gmail.com?subject=Cinderella">
+        <span class="en">Contact us</span><span class="es">Contáctanos</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html#brands">← <span class="en">All of NorthBridge</span><span class="es">Todo NorthBridge</span></a></p>
+    <p class="kicker"><span class="en">NorthBridge · Cinderella · Data &amp; workflows</span><span class="es">NorthBridge · Cinderella · Datos y flujos</span></p>
+    <h1>
+      <span class="en">The paperwork fairy your business never had.</span>
+      <span class="es">El hada de los papeles que tu negocio nunca tuvo.</span>
+    </h1>
+    <p class="lede">
+      <span class="en">Cinderella handles the invisible housework: chasing invoices, building reports, moving data between apps, onboarding clients. Work that has to happen every day, done every day, without a person doing it.</span>
+      <span class="es">Cinderella se encarga de la limpieza invisible: cobrar facturas, armar reportes, mover datos entre aplicaciones, dar de alta clientes. Trabajo que tiene que pasar todos los días, hecho todos los días, sin que una persona lo haga.</span>
+    </p>
+    <div class="hero-cta">
+      <a class="btn big" href="mailto:northbridgeai1@gmail.com?subject=Cinderella">
+        <span class="en">Contact us</span><span class="es">Contáctanos</span>
+      </a>
+      <a class="btn big ghost" href="#plans">
+        <span class="en">See Cinderella plans</span><span class="es">Ver planes Cinderella</span>
+      </a>
+    </div>
+    <p class="hero-note" style="margin-top:18px">
+      <span class="en"><strong>30-day money-back guarantee</strong> on your first month. Replies within one business day.</span>
+      <span class="es"><strong>Garantía de devolución de 30 días</strong> en tu primer mes. Respondemos en un día hábil.</span>
+    </p>
+  </div>
+</section>
+
+<section class="fit">
+  <div class="wrap">
+    <p class="step-label rv"><span class="en">Is Cinderella for you?</span><span class="es">¿Cinderella es para ti?</span></p>
+    <h2 class="h2 rv">
+      <span class="en">If any of these is your Tuesday, yes.</span>
+      <span class="es">Si algo de esto es tu martes, sí.</span>
+    </h2>
+    <div class="fit-grid">
+      <div class="fit-card rv">
+        <h3><span class="en">"Did they pay us yet?"</span><span class="es">"¿Ya nos pagaron?"</span></h3>
+        <p><span class="en">You check bank statements against invoices by hand, and late payers get chased whenever someone remembers.</span><span class="es">Cruzas estados de cuenta contra facturas a mano, y a los morosos se les cobra cuando alguien se acuerda.</span></p>
+      </div>
+      <div class="fit-card rv d1">
+        <h3><span class="en">"Give me a minute, I'll build the report."</span><span class="es">"Dame un minuto, armo el reporte."</span></h3>
+        <p><span class="en">The weekly numbers exist, scattered across four tools, and every week someone spends hours assembling them.</span><span class="es">Los números de la semana existen, regados en cuatro herramientas, y cada semana alguien pasa horas juntándolos.</span></p>
+      </div>
+      <div class="fit-card rv d2">
+        <h3><span class="en">"I copy it here, then paste it there."</span><span class="es">"Lo copio aquí, y lo pego allá."</span></h3>
+        <p><span class="en">Orders, contacts, or hours get typed twice into different systems. Twice the typing, twice the mistakes.</span><span class="es">Pedidos, contactos u horas se escriben dos veces en sistemas distintos. El doble de tipeo, el doble de errores.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plans" id="plans">
+  <div class="wrap">
+    <p class="step-label rv"><span class="en">Cinderella plans</span><span class="es">Planes Cinderella</span></p>
+    <h2 class="h2 rv"><span class="en">Three sizes of clean.</span><span class="es">Tres tamaños de orden.</span></h2>
+    <p class="sub rv">
+      <span class="en">A workflow is one automated system doing one job end to end: built by us, connected to your tools, and kept running for as long as you're on the plan.</span>
+      <span class="es">Un flujo es un sistema automatizado que hace una tarea de principio a fin: construido por nosotros, conectado a tus herramientas, y mantenido mientras estés en el plan.</span>
+    </p>
+    <div class="tiers">
+      <div class="tier rv">
+        <h3>Sweep</h3>
+        <p class="for"><span class="en">Your first two jobs off your plate.</span><span class="es">Tus primeras dos tareas fuera de tu plato.</span></p>
+        <div class="tprice"><span class="n">$199</span><span class="per"><span class="en">/ month</span><span class="es">/ mes</span></span></div>
+        <ul>
+          <li><strong>2</strong> <span class="en">workflows, built &amp; maintained</span><span class="es">flujos, construidos y mantenidos</span></li>
+          <li><span class="en">Monthly report: what your workflows did &amp; saved</span><span class="es">Reporte mensual: qué hicieron y ahorraron tus flujos</span></li>
+          <li><span class="en">Support by email</span><span class="es">Soporte por correo</span></li>
+        </ul>
+        <a class="btn navy cta book" style="text-align:center" href="book.html?plan=Cinderella+Sweep">
+          <span class="en">Choose Sweep</span><span class="es">Elegir Sweep</span>
+        </a>
+      </div>
+      <div class="tier rv d1">
+        <h3>Shine</h3>
+        <p class="for"><span class="en">More hands, same housework.</span><span class="es">Más manos, la misma limpieza.</span></p>
+        <div class="tprice"><span class="n">$329</span><span class="per"><span class="en">/ month</span><span class="es">/ mes</span></span></div>
+        <ul>
+          <li><strong>3</strong> <span class="en">workflows, built &amp; maintained</span><span class="es">flujos, construidos y mantenidos</span></li>
+          <li><span class="en">Monthly report: what your workflows did &amp; saved</span><span class="es">Reporte mensual: qué hicieron y ahorraron tus flujos</span></li>
+          <li><strong>1</strong> <span class="en">workflow tweak or swap / month</span><span class="es">ajuste o cambio de flujo / mes</span></li>
+        </ul>
+        <a class="btn navy cta book" style="text-align:center" href="book.html?plan=Cinderella+Shine">
+          <span class="en">Choose Shine</span><span class="es">Elegir Shine</span>
+        </a>
+      </div>
+      <div class="tier best rv d2">
+        <span class="badge"><span class="en">Popular</span><span class="es">Popular</span></span>
+        <h3>Spotless</h3>
+        <p class="for"><span class="en">The whole back office, handled.</span><span class="es">Toda la oficina de atrás, resuelta.</span></p>
+        <div class="tprice"><span class="n">$349</span><span class="per"><span class="en">/ month</span><span class="es">/ mes</span></span></div>
+        <ul>
+          <li><strong>5</strong> <span class="en">workflows, built &amp; maintained</span><span class="es">flujos, construidos y mantenidos</span></li>
+          <li><span class="en">Tweaks &amp; swaps whenever you need them</span><span class="es">Ajustes y cambios cuando los necesites</span></li>
+          <li><span class="en">Priority build queue</span><span class="es">Fila de construcción prioritaria</span></li>
+        </ul>
+        <a class="btn cta book" style="text-align:center" href="book.html?plan=Cinderella+Spotless">
+          <span class="en">Choose Spotless</span><span class="es">Elegir Spotless</span>
+        </a>
+        <p class="value-note">
+          <span class="en">$20 more than Shine gets you two more workflows, unlimited tweaks, priority builds.</span>
+          <span class="es">$20 más que Shine te da dos flujos más, ajustes sin límite, construcción prioritaria.</span>
+        </p>
+      </div>
+    </div>
+    <p class="tiers-note rv">
+      <span class="en">Choosing a plan books your <strong>free first meeting</strong>: the invite lands on both calendars automatically. Every plan: 30-day money-back guarantee on your first month · no long contracts · check-ins included · pay yearly and get 2 months free.</span>
+      <span class="es">Elegir un plan agenda tu <strong>primera reunión gratuita</strong>: la invitación llega a ambos calendarios automáticamente. Todos los planes: garantía de devolución de 30 días en tu primer mes · sin contratos largos · seguimientos incluidos · paga el año y llévate 2 meses gratis.</span>
+    </p>
+
+    <div class="bundle-strip rv">
+      <div>
+        <h3><span class="en">Need communication or training too?</span><span class="es">¿También necesitas comunicación o capacitación?</span></h3>
+        <p><span class="en">Cinderella is included in every NorthBridge bundle: combined with Hermes and Socrates, the bundles cost less than the plans separately.</span><span class="es">Cinderella está incluida en todos los paquetes NorthBridge: combinada con Hermes y Socrates, los paquetes cuestan menos que los planes por separado.</span></p>
+      </div>
+      <a class="btn big" href="index.html#plans"><span class="en">See the bundles</span><span class="es">Ver los paquetes</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2 class="h2 rv">
+      <span class="en">Not sure which plan? Don't decide alone.</span>
+      <span class="es">¿No sabes qué plan? No lo decidas solo.</span>
+    </h2>
+    <p class="rv">
+      <span class="en">Email us what eats your team's hours. In the first meeting we'll find the problems together and tell you exactly which plan fits, or if a smaller one is enough. We'd rather undersell you than lose you.</span>
+      <span class="es">Escríbenos qué se come las horas de tu equipo. En la primera reunión encontramos los problemas juntos y te decimos exactamente qué plan te calza, o si uno más pequeño alcanza. Preferimos venderte de menos que perderte.</span>
+    </p>
+    <a class="btn navy big rv" href="mailto:northbridgeai1@gmail.com?subject=Cinderella">
+      <span class="en">Contact us</span><span class="es">Contáctanos</span>
+    </a>
+    <p class="mail rv">
+      <span class="en">Or write directly: </span><span class="es">O escribe directamente: </span>
+      <a href="mailto:northbridgeai1@gmail.com">northbridgeai1@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 NorthBridge · Quito, Ecuador</span>
+    <span><span class="en">Automation that pays for itself.</span><span class="es">Automatización que se paga sola.</span></span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
