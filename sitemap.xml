@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://northbridgeai1-cmyk.github.io/offdesk-website/</loc>
+    <loc>https://meetnorthbridge.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://northbridgeai1-cmyk.github.io/offdesk-website/cinderella.html</loc>
+    <loc>https://meetnorthbridge.com/cinderella.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://northbridgeai1-cmyk.github.io/offdesk-website/hermes.html</loc>
+    <loc>https://meetnorthbridge.com/hermes.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://northbridgeai1-cmyk.github.io/offdesk-website/socrates.html</loc>
+    <loc>https://meetnorthbridge.com/socrates.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://northbridgeai1-cmyk.github.io/offdesk-website/book.html</loc>
+    <loc>https://meetnorthbridge.com/book.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
