@@ -1,5 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#fbfaf6"/>
-  <text x="4" y="46" font-family="Georgia, serif" font-weight="700" font-size="40" fill="#1d2521">OD</text>
-  <circle cx="54" cy="12" r="6" fill="#2e7d4f"/>
+  <defs>
+    <linearGradient id="nbg" x1="8" y1="52" x2="56" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c1572f"/>
+      <stop offset=".55" stop-color="#1f9e8c"/>
+      <stop offset="1" stop-color="#25d193"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 10 C34.5 22 42 29.5 54 32 C42 34.5 34.5 42 32 54 C29.5 42 22 34.5 10 32 C22 29.5 29.5 22 32 10 Z" fill="url(#nbg)"/>
+  <circle cx="32" cy="8" r="6" fill="url(#nbg)"/>
+  <circle cx="32" cy="56" r="6" fill="url(#nbg)"/>
+  <circle cx="8" cy="32" r="6" fill="url(#nbg)"/>
+  <circle cx="56" cy="32" r="6" fill="url(#nbg)"/>
+  <path d="M32 20 L35 30 L32 44 L29 30 Z" fill="#1a1a1a" opacity=".85"/>
 </svg>
